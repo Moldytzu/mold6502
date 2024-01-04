@@ -11,6 +11,21 @@ LCD_RS = %00100000
 LCD_E  = %01000000
 LCD_RW = %10000000
 
+LCD_STRING_ADDRESS_LOW = $00
+LCD_STRING_ADDRESS_HIGH = $01
+
+	.macro lcd_print, msg
+	; print using indexing
+	ldx #0
+.next:
+	lda \msg, x     ; load next byte from string
+	beq .end           ; branch out if it's zero
+	jsr lcd_write_byte ; write the byte to the lcd
+	inx                ; increment index
+	jmp .next          ; write next byte
+.end:
+	.endmacro
+
 ; halts the CPU
 ; inputs: none
 ; outputs: none
@@ -110,18 +125,12 @@ _start:
 	cld ; disable decimal mode
 	jsr lcd_init
 	
-	lda #'H'
-	jsr lcd_write_byte
-	lda #'e'
-	jsr lcd_write_byte
-	lda #'l'
-	jsr lcd_write_byte
-	lda #'l'
-	jsr lcd_write_byte
-	lda #'o'
-	jsr lcd_write_byte
+	lcd_print message
 	
 	jsr halt
+	
+message:
+	.asciiz "Test123"
 	
 	.org $FFFC
 	.word _start
