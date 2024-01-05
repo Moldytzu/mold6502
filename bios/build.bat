@@ -2,5 +2,10 @@
 
 call %cd%\..\env.cmd
 
-del /q bios.bin
-%asm% -Fbin -chklabels -nocase -dotdir -o bios.bin entry.S
+del /q bios.bin *.o
+
+
+rem %asm% -Fbin -chklabels -nocase -dotdir -ldots -I"%cd%" -o bios.bin entry.S
+@echo on
+%asm% -t none -I"%cd%" -o entry.o entry.S
+%ld%  -C sbc.cfg -o bios.bin entry.o

@@ -86,7 +86,7 @@ while True:
     total_cycles += cpu.cc
     
     if cpu.r.pc == 0xFFFF:
-        #print("HALT")
+        print("HALT")
         break
     
     # dump state
