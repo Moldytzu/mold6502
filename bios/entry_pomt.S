@@ -1,15 +1,14 @@
 	.feature STRING_ESCAPES
 	.segment "CODE"
 	.include "lcd.S"
+	.include "via2.S"
 	.include "psg.S"
-	.include "acia.S"
-	.include "kbd.S"
 	.include "utils.S"
 	
 ; program entry point
 _reset:
 	cld ; disable decimal mode
-	sei ; disable interrupts
+	cli ; disable interrupts
 	
 pomt: ; perform power-on memory test
 	; test zero page presence
@@ -33,25 +32,12 @@ pomt_fail:
 pomt_success:
 	jsr lcd_init
 	jsr psg_silence_all
-	jsr acia_init
-	jsr kbd_init
-	
-	lda #'R'
-	sta ACIA_DATA
-	
-	sei ; disable interrupts
-	
-loop:
-	lda ACIA_STATUS ; read the ACIA status
-	sta ACIA_DATA
-	
-	;lda ACIA_DATA ; read the received byte
-	;sta ACIA_DATA ; echo it back
-	;jsr psg_write ; send it to the psg
-	
-	jmp loop
+	lcd_write_string hello_msg
 	
 	jmp halt
+	
+_irq:
+	rti
 	
 hello_msg:
 	.asciiz "MOLD-I\n"

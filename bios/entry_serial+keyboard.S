@@ -36,18 +36,17 @@ pomt_success:
 	jsr acia_init
 	jsr kbd_init
 	
-	lda #'R'
-	sta ACIA_DATA
-	
-	sei ; disable interrupts
+	cli ; enable interrupts
 	
 loop:
 	lda ACIA_STATUS ; read the ACIA status
-	sta ACIA_DATA
+	and #%1000      ; and the receiver full bit
+	beq loop        ; if it's not set then loop
 	
-	;lda ACIA_DATA ; read the received byte
-	;sta ACIA_DATA ; echo it back
-	;jsr psg_write ; send it to the psg
+	lda ACIA_DATA ; read the received byte
+	sta ACIA_DATA ; echo it back
+	
+	jsr lcd_write_byte
 	
 	jmp loop
 	

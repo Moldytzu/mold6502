@@ -70,7 +70,7 @@ class LCD:
                 pass # todo: handle instructions
         self.last_state = enabled
 
-via1 = VIA(memory, 0xA000)
+via1 = VIA(memory, 0x8800)
 lcd = LCD(via1)
 
 total_cycles = 0
