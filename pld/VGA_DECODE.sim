@@ -1,0 +1,51 @@
+%SIGNAL
+PIN   3 =  A4 
+PIN   5 =  CLK 
+PIN  16 =  CPU_ALLOWB 
+PIN   7 =  HSYNC 
+PIN   2 =  IO_CSB 
+PIN  18 =  OE_DATAB 
+PIN  12 =  OE_RAMB 
+PIN  19 =  OE_VGAB 
+PIN   4 =  RWB 
+PIN   6 =  VISIBLEB 
+PIN  17 =  WE_DATAB 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+CPU_ALLOWB =>
+    !HSYNC & VISIBLEB
+
+OE_DATAB =>
+    A4 & !IO_CSB
+
+OE_RAMB =>
+    !A4 & VISIBLEB
+  # IO_CSB & VISIBLEB
+
+OE_VGAB =>
+    IO_CSB
+  # !A4
+
+WE_DATAB =>
+    CLK & !OE_DATAB & !RWB
+
+CPU_ALLOWB.oe  =>
+    1 
+
+OE_DATAB.oe  =>
+    1 
+
+OE_RAMB.oe  =>
+    1 
+
+OE_VGAB.oe  =>
+    1 
+
+WE_DATAB.oe  =>
+    1 
+
+%END

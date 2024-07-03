@@ -5,9 +5,12 @@
 	ACIA_CONTROL = ACIA_BASE + 3
 	
 acia_init:
-	lda #$1F ; 8N1 @ 19600 baud
+	lda #$00 ; software reset
+	sta ACIA_STATUS
+
+	lda #%00010000 ; 8N1 @ 115200 baud
 	sta ACIA_CONTROL
 	
-	lda #$0B ; no parity, irqs disabled, rx/tx enabled
+	lda #%00001011 ; no parity, irqs disabled, rx/tx enabled
 	sta ACIA_COMMAND
 	rts

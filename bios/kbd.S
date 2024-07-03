@@ -4,7 +4,6 @@
 kbd_init:
 	; set VIA2 port A as input
 	stz VIA2_DDRA
-	stz VIA2_DDRB
 	stz LAST_SCANCODE
 	
 	lda #$01
@@ -34,7 +33,7 @@ _irq:
 	
 	; send to UART and to lcd
 	sta ACIA_DATA
-	jsr lcd_write_byte
+	;jsr lcd_write_byte
 	
 _exit_irq:
 	plx

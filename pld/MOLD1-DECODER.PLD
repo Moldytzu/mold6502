@@ -1,0 +1,26 @@
+Name     MOLD1-DECODER ;
+PartNo   00 ;
+Date     15/06/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  ;
+Assembly None ;
+Location  ;
+Device   g16v8a ;
+
+/* input */
+PIN 2 = CLK ;
+PIN 14 = RWB ;
+PIN 13 = A15 ;
+PIN 12 = A14 ;
+
+/* output */
+PIN 19 = IO_CSB;
+PIN 18 = EEPROM_CSB;
+PIN 17 = RAM_CSB;
+PIN 16 = RAM_OEB;
+
+RAM_OEB = !RWB;
+RAM_CSB = !(CLK&!A15);
+EEPROM_CSB = !(A14&A14);
+IO_CSB = !(A15&!A14);

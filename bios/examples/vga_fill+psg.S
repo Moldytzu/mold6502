@@ -56,9 +56,6 @@ pomt_success:
 	
 	cli ; enable interrupts
 
-	lda #'^'
-	sta ACIA_DATA
-
 	lda #%11111111
 	sta VIA3_DDRB
 	sta VIA3_DDRA
@@ -111,10 +108,6 @@ fill_end:
 	ldy START
 	stz VIA3_ORA
 	stz VIA3_ORB
-	pha
-	lda #'G'
-	sta ACIA_DATA
-	pla
 	jmp fill
 
 	jmp halt

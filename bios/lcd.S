@@ -153,7 +153,11 @@ lcd_init:
 	; LCD RS bit 5, E bit 6, RW bit 7
 	lda #%11111111 ; set VIA1 ports as outputs
 	sta VIA1_DDRB
+	
+	lda #%01111111
 	sta VIA1_DDRA
+	
+	rts
 	
 	lda #%00111000 ; set interface data length to 8 bits and 5x8 font
 	jsr lcd_write_instruction

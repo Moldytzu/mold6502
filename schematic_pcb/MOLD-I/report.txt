@@ -1,0 +1,73 @@
+Info: Processing symbol 'C1:Capacitor_THT:CP_Radial_D4.0mm_P2.00mm'.
+Info: Processing symbol 'C2:Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal'.
+Info: Processing symbol 'C3:Capacitor_THT:CP_Radial_D5.0mm_P2.50mm'.
+Info: Processing symbol 'C4:Capacitor_THT:C_Disc_D9.0mm_W2.5mm_P5.00mm'.
+Info: Processing symbol 'D1:digikey-footprints:Diode_DO-35_P10mm'.
+Info: Processing symbol 'J1:Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical'.
+Info: Processing symbol 'U26:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U27:Package_DIP:DIP-32_W7.62mm'.
+Info: Processing symbol 'J4:Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical'.
+Info: Processing symbol 'U28:Package_DIP:DIP-28_W15.24mm'.
+Info: Processing symbol 'X1:Oscillator:Oscillator_DIP-14'.
+Info: Processing symbol 'X2:Oscillator:Oscillator_DIP-8'.
+Info: Processing symbol 'X3:Oscillator:Oscillator_DIP-14'.
+Info: Processing symbol 'X4:Oscillator:Oscillator_DIP-14'.
+Info: Processing symbol 'J2:Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical'.
+Info: Processing symbol 'J3:Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical'.
+Info: Processing symbol 'Y1:Crystal:Crystal_HC52-U_Vertical'.
+Info: Processing symbol 'JP1:Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical'.
+Info: Processing symbol 'R1:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R2:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R3:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R4:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R5:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R6:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'R7:Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal'.
+Info: Processing symbol 'SW1:button-master:SW_PUSH_6mm'.
+Info: Processing symbol 'U1:Package_DIP:DIP-32_W7.62mm'.
+Info: Processing symbol 'U2:Package_DIP:DIP-40_W15.24mm'.
+Info: Processing symbol 'U3:Package_DIP:DIP-40_W15.24mm'.
+Info: Processing symbol 'U4:Package_DIP:DIP-40_W15.24mm'.
+Info: Processing symbol 'U5:Package_DIP:DIP-40_W15.24mm'.
+Info: Processing symbol 'U6:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U7:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U8:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U9:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U10:Package_DIP:DIP-14_W7.62mm'.
+Info: Processing symbol 'U11:Package_DIP:DIP-14_W7.62mm'.
+Info: Processing symbol 'U12:Package_DIP:DIP-28_W15.24mm'.
+Info: Processing symbol 'U13:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U14:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U15:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U16:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U17:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U18:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U19:Package_DIP:DIP-20_W7.62mm'.
+Info: Processing symbol 'U20:Package_DIP:DIP-28_W15.24mm'.
+Info: Processing symbol 'U21:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U22:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U23:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U24:Package_DIP:DIP-16_W7.62mm'.
+Info: Processing symbol 'U25:Package_DIP:DIP-16_W7.62mm'.
+Warning: No net found for component J1 pad 2 (no pin 2 in symbol).
+Warning: No net found for component J1 pad 1 (no pin 1 in symbol).
+Warning: No net found for component J1 pad 7 (no pin 7 in symbol).
+Warning: No net found for component J1 pad 5 (no pin 5 in symbol).
+Warning: No net found for component J1 pad 4 (no pin 4 in symbol).
+Warning: No net found for component J1 pad 3 (no pin 3 in symbol).
+Warning: No net found for component J1 pad 6 (no pin 6 in symbol).
+Warning: No net found for component J1 pad 8 (no pin 8 in symbol).
+Warning: No net found for component U13 pad 9 (no pin 9 in symbol).
+Error: J1 pad 1a not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 2a not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 3a not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 4a not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 1b not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 2b not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 3b not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: J1 pad 4b not found in Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical.
+Error: SW1 pad 3 not found in button-master:SW_PUSH_6mm.
+Error: SW1 pad 4 not found in button-master:SW_PUSH_6mm.
+
+
+Info: Total warnings: 9, errors: 10.

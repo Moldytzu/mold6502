@@ -1,0 +1,30 @@
+Name     VGA_DECODE ;
+PartNo   00 ;
+Date     15/06/2024 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Da ;
+Assembly None ;
+Location  Da ;
+Device   g16v8a ;
+
+/* input */
+PIN 2 = IO_CSB ;
+PIN 3 = A4 ;
+PIN 4 = RWB ;
+PIN 5 = CLK;
+PIN 6 = VISIBLEB;
+PIN 7 = HSYNC;
+
+/* output */
+PIN 19 = OE_VGAB ; /* permite generatorului de sync sa acceseze adresele */
+PIN 18 = OE_DATAB ; /* permite -6502 sa acceseze datele*/
+PIN 17 = WE_DATAB ; /* permite scrierea datelor pe RAM */
+PIN 16 = CPU_ALLOWB; /* semnal de iesire ce zice daca se poate scrie in ram in siguranta*/
+PIN 12 = OE_RAMB; /* permite iesirea de date din ram */
+
+OE_VGAB = !((IO_CSB # !A4)); // !IO_CSB & A4
+OE_DATAB = !(!IO_CSB & A4); // IO_CSB # !A4
+WE_DATAB = !(!OE_DATAB & !RWB & CLK); // !A4 # IO_CSB # !CLK;
+CPU_ALLOWB = !(VISIBLEB&!(HSYNC));
+OE_RAMB = !A4 & VISIBLEB # IO_CSB & VISIBLEB; // !A4 & VISIBLEB # IO_CSB & VISIBLEB //!A4 & !RWB & VISIBLEB # !A4 & !CLK & VISIBLEB # IO_CSB & VISIBLEB;

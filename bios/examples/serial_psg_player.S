@@ -38,15 +38,18 @@ pomt_success:
 	
 	cli ; enable interrupts
 	
+	lda #'X'
+	sta ACIA_DATA
 loop:
 	lda ACIA_STATUS ; read the ACIA status
 	and #%1000      ; and the receiver full bit
 	beq loop        ; if it's not set then loop
 	
 	lda ACIA_DATA ; read the received byte
-	sta ACIA_DATA ; echo it back
+	;sta ACIA_DATA ; echo it back
 	
-	jsr lcd_write_byte
+	jsr psg_write 
+	;jsr lcd_write_byte
 	
 	jmp loop
 	

@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "din")(type "KiCad")(uri "C:/Users/Alex/Downloads/din")(options "")(descr ""))
+  (lib (name "Custom_Footprints")(type "KiCad")(uri "C:/Users/Alex/Downloads/kicad_libraries-master/Custom_Footprints.pretty")(options "")(descr ""))
+  (lib (name "PS2_mini_din_6")(type "KiCad")(uri "C:/Users/Alex/Downloads/PS2-Breakout-Board-master/PS2_mini_din_6.pretty")(options "")(descr ""))
+)
